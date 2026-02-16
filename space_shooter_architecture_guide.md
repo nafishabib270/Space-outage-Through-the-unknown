@@ -5,8 +5,8 @@
 **Project Name:** Space Outage — Through the Unknown  
 **Genre:** 2D Arcade / Action Shooter  
 **Language:** C (C99)  
-**Graphics & Audio Library:** Raylib  
-**Platform:** Windows / Linux (cross‑platform capable)
+**Graphics & Audio Library:** Free assets from internet  
+**Platform:** Windows
 
 ---
 
