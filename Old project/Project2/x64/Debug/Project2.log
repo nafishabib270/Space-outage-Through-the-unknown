@@ -1,0 +1,49 @@
+﻿  main.c
+E:\Game dev\Project2\main.c(20,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Game dev\Project2\main.c(63,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(64,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(65,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(66,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(80,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(81,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(88,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(89,43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(224,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(269,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\Game dev\Project2\main.c(367,53): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(382,116): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+E:\Game dev\Project2\main.c(426,21): warning C4013: 'DrawBoosters' undefined; assuming extern returning int
+E:\Game dev\Project2\main.c(566,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(142,50): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(142,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(143,41): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(143,54): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(144,47): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(144,56): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(144,69): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(146,48): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(146,65): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(147,45): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(147,65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(150,40): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(150,53): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(154,56): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(154,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(161,55): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(161,69): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(164,53): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(164,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(166,54): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(168,35): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Game dev\Project2\main.c(214,34): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Game dev\Project2\main.c(451,148): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(451,176): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(580,40): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(614,148): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(614,176): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(642,148): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(642,176): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Game dev\Project2\main.c(158,15): warning C4101: 'map2': unreferenced local variable
+  Project2.vcxproj -> E:\Game dev\Project2\x64\Debug\Project2.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
