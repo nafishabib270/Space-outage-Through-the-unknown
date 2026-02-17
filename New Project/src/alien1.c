@@ -27,7 +27,7 @@ void Spawn_alien(Alien1* alien1, int screen_width, int screen_height, int velo) 
 }
 
 void update_alien(Alien1 aliens1[], int cnt, int speed, float dt) {
-    const int total_frames = 8;       // Assuming 8 frames in your alien sprite sheet
+    const int total_frames = 8;       // Assuming 8 frames in our alien sprite sheet
     const float frame_time = 0.1f;    // Time per frame (0.1s per frame = 10fps)
 
     for (int i = 0; i < cnt; i++) {
@@ -78,5 +78,6 @@ void draw_alien(Alien1 aliens[], int cnt, Texture2D alien_src) {
         }
     }
 }
+
 
 
