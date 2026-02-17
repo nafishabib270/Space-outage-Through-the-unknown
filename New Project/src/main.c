@@ -221,7 +221,7 @@ int main(void)
     Rectangle char_pos = spaceship_pos;
 
 
-    next_alien_spawn = GetRandomValue(2, 5); // random between 2–5 seconds
+    next_alien_spawn = GetRandomValue(2, 5); // random between 2â€“5 seconds
 
     int once = 1;
 
@@ -260,8 +260,8 @@ int main(void)
                 ResetGame(&spaceship_pos, enemies, aliens1, bullets, screenWidth, screenHeight, spaceship, enemy, alien1_tex, boosters);
                 init_enemy(enemies, 10, enemy);
                 init_alien(aliens1, 20, alien1_tex);
-                InitBoosters(boosters);
-                InitBoosters(side_boosters);
+                init_boosters(boosters);
+                init_boosters(side_boosters);
 
                 init_bullets(bullets, 50);
 
@@ -731,3 +731,4 @@ int main(void)
 
     return 0;
 }
+
