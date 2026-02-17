@@ -11,10 +11,11 @@ typedef struct {
     int active;
 } Particle;
 
-void InitBoosters(Particle boosters[]);
-void UpdateBoosters(Rectangle spaceship_pos, Particle boosters[]);
-void DrawBooster(Particle boosters[]);
+void init_boosters(Particle boosters[]);
+void Update_boosters(Rectangle spaceship_pos, Particle boosters[]);
+void Draw_booster(Particle boosters[]);
 void update_side_boosters(Particle side_boosters[], Rectangle spaceship_pos, int direction);
 void only_update_boosters(Particle side_boosters[]);
 
 #endif 
+
