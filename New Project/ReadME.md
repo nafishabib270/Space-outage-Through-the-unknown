@@ -1,6 +1,6 @@
 # Raylib Game: Refactoring Report (ver1 → ver2)
 
-**Course:** Advanced Programming Lab — 2nd Year CSE  
+**Course:** Advanced Programming Lab   
 **Project:** Space Outage — Through the Unknown (raylib)  
 
 ---
