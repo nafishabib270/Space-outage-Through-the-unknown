@@ -160,20 +160,28 @@ AI was used throughout the full transformation from ver1 to ver2. Analysis promp
 **Resulting file structure (implemented in ver2):**
 
 ```
-space_outage/
-├── main.c                  # Orchestrator only: resource loading, game loop, state dispatch
-├── entity.h                # EntityBase struct: shared rec/health/alive contract (no .c needed)
-├── game_state.h/.c         # GameState enum + g_current_state global
-├── score.h/.c              # SessionStats struct, session_reset, register_kill, damage functions
-├── spaceship.h/.c          # SpaceshipState, input handling, crash physics
-├── astronaut.h/.c          # AstronautState, movement, jumping, gravity, sprite animation
-├── enemy.h/.c              # Enemy struct (embeds EntityBase), pool init/spawn/update/draw
-├── alien.h/.c              # Alien struct (embeds EntityBase), pool init/spawn/update/draw (renamed from alien1)
-├── bullet.h/.c             # Bullet pool, spawn, update, draw
-├── booster.h/.c            # Particle pool, rear/side/coast update, draw
-├── spawner.h/.c            # EnemySpawner, AlienSpawner — timing state + update functions
-├── collision.h/.c          # collision_bullets_vs_entities, collision_entities_vs_player
-└── ui.h/.c                 # ui_button, ui_health_bar, ui_score
+space-outage/
+├── src/
+│   ├── alien1.c        # Ground alien logic & animation
+│   ├── booster.c       # Particle / booster system
+│   ├── bullet.c        # Bullet physics & rendering
+│   ├── enemy.c         # Aerial enemy AI & interception
+│   ├── game_state.c    # Main loop & state control
+│   └── ui.c            # Menu UI buttons
+│
+├── headers/
+│   ├── alien1.h
+│   ├── booster.h
+│   ├── bullet.h
+│   ├── enemy.h
+│   ├── game_state.h
+│   └── ui.h
+│
+├── assets/
+│   ├── textures/
+│   └── sounds/
+│
+└── README.md
 ```
 
 ### Prompt 3.2 — Entity Base and LSP Header Design
