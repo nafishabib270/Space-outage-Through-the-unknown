@@ -2,7 +2,6 @@
 
 **Course:** Advanced Programming Lab — 2nd Year CSE  
 **Project:** Space Outage — Through the Unknown (raylib)  
-**Date:** February 2026
 
 ---
 
