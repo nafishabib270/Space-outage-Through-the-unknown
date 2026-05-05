@@ -19,40 +19,52 @@ FetchContent_MakeAvailable(raylib)
 
 # ── Sources ───────────────────────────────────────────────────────────────────
 set(SOURCES
-    src/main.cpp
+    main.cpp
 
-    # Core
-    src/core/ResourceManager.cpp
-    src/core/GameStateMachine.cpp
+    # Infrastructure
+    Infrastructure/ResourceManager.cpp
 
-    # Model
-    src/model/GameModel.cpp
-    src/model/SessionStats.cpp
-    src/model/entities/HomingEnemy.cpp
-    src/model/entities/GroundAlien.cpp
-    src/model/entities/Bullet.cpp
-    src/model/entities/BulletPool.cpp
-    src/model/systems/CollisionSystem.cpp
-    src/model/systems/EnemySpawner.cpp
-    src/model/systems/AlienSpawner.cpp
-    src/model/systems/PhysicsSystem.cpp
+    # Core - Interfaces and State Management
+    Core/Interfaces/GameStateMachine.cpp
 
-    # View
-    src/view/GameRenderer.cpp
-    src/view/HUD.cpp
-    src/view/MenuView.cpp
-    src/view/ThrusterEffect.cpp
+    # Model - Game Logic and Entities
+    Models/Systems/GameModel.cpp
+    Models/Systems/SessionStats.cpp
+    Models/Systems/PhysicsSystem.cpp
+    Models/Systems/CollisionSystem.cpp
+    Models/Systems/EnemySpawner.cpp
+    Models/Systems/AlienSpawner.cpp
+    Models/Systems/BulletPool.cpp
+    Models/Entities/Bullet.cpp
+    Models/Entities/HomingEnemy.cpp
+    Models/Entities/GroundAlien.cpp
 
-    # Controller
-    src/controller/GameController.cpp
-    src/controller/SpaceshipController.cpp
-    src/controller/AstronautController.cpp
-    src/controller/InputHandler.cpp
+    # Controllers - Input and Game Flow
+    Controllers/GameController.cpp
+    Controllers/InputHandler.cpp
+    Controllers/SpaceshipController.cpp
+    Controllers/AstronautController.cpp
+
+    # Views - Rendering and UI
+    Views/Rendering/GameRenderer.cpp
+    Views/Rendering/ThrusterEffect.cpp
+    Views/UI/HUD.cpp
+    Views/UI/MenuView.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+# Include directories for the modular structure
+target_include_directories(${PROJECT_NAME} PRIVATE
+    .
+    Infrastructure
+    Core/Interfaces
+    Models/Systems
+    Models/Entities
+    Controllers
+    Views/Rendering
+    Views/UI
+)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 
