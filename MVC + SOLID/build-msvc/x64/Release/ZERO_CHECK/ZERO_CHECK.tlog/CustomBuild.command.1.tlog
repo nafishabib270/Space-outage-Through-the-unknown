@@ -1,0 +1,10 @@
+^E:\NEW_REPO\SPACE-OUTAGE-THROUGH-THE-UNKNOWN\MVC + SOLID\BUILD-MSVC\CMAKEFILES\DC390EDA1A6F8CDECF73727C035671B2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SE:/New_repo/Space-outage-Through-the-unknown/MVC + SOLID" "-BE:/New_repo/Space-outage-Through-the-unknown/MVC + SOLID/build-msvc" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/New_repo/Space-outage-Through-the-unknown/MVC + SOLID/build-msvc/GeoWorld.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

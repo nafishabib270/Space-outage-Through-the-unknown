@@ -28,9 +28,12 @@ private:
     bool      alive_{ false };
     float     velocityX_{ 0 };
     float     velocityY_{ 0 };
-    bool      targetLocked_{ false };
+    bool      tracking_{ false };
+    float     detectionRange_{ 600.0f };
+    float     chaseSpeedY_{ 140.0f };
     float     width_{ 0 };
     float     height_{ 0 };
 
-    void computeIntercept(Rectangle target);
+    void updateTracking(Rectangle target);
+    void clampPosition();
 };

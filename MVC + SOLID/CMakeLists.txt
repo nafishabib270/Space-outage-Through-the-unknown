@@ -24,8 +24,7 @@ set(SOURCES
     # Infrastructure
     Infrastructure/ResourceManager.cpp
 
-    # Core - Interfaces and State Management
-    Core/Interfaces/GameStateMachine.cpp
+    # Core - Interfaces and State Management (header-only, no .cpp needed)
 
     # Model - Game Logic and Entities
     Models/Systems/GameModel.cpp

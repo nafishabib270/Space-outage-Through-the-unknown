@@ -69,8 +69,8 @@ void GameModel::updateAstronautPhase(float dt) {
     physics_.updateAstronaut(astronautPos_, dt);
     bulletPool_.update(dt, SCREEN_W);
 
-    Rectangle astroTarget{ astronautPos_.x + 200, astronautPos_.y + 75,
-                            astronautPos_.width + 10, astronautPos_.height + 10 };
+    Rectangle astroTarget{ astronautPos_.x, astronautPos_.y,
+                            astronautPos_.width, astronautPos_.height };
     enemySpawner_.update(dt, SCREEN_W, SCREEN_H, astroTarget);
     alienSpawner_.update(dt, SCREEN_W);
 
