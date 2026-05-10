@@ -1,7 +1,8 @@
 #include "SpaceshipController.h"
+#include "ResourceManager.h"
 
-SpaceshipController::SpaceshipController(GameModel& model, Sound laser)
-    : model_(model), laserSound_(laser) {}
+SpaceshipController::SpaceshipController(GameModel& model, ResourceManager& resources)
+    : model_(model), resources_(resources) {}
 
 SpaceshipController::ThrusterHints
 SpaceshipController::handleInput(const InputSnapshot& in, float dt) {
@@ -22,8 +23,10 @@ SpaceshipController::handleInput(const InputSnapshot& in, float dt) {
         if (bp.canFire()) {
             bp.fire(pos, { 1.0f, 0.0f }, 1200.0f);
             bp.resetCooldown();
-            PlaySound(laserSound_);
+            PlaySound(resources_.getLaserAlias());
         }
+    } else {
+        model_.getBulletPool().tickCooldown(dt);
     }
 
     return { up, down, in.anyMovement };

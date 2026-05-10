@@ -55,5 +55,5 @@ private:
     // Astronaut sprite animation state (VIEW-only — not in Model)
     mutable float astroFrameTimer_{ 0 };
     mutable float astroFrameX_{ 0 };
-    float         astroFrameWidth_{ 0 };
+    mutable float astroFrameWidth_{ 0 };
 };

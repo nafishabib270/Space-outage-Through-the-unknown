@@ -36,9 +36,12 @@ public:
 
     Music&              getBGM()       { return bgm_; }
     Sound               getLaser()     const { return laser_; }
+    Sound               getLaserAlias();
     std::vector<Sound>& getHitSounds() { return hitSounds_; }
 
 private:
+    static constexpr int LASER_ALIAS_COUNT = 16;
+
     Texture2D spaceship_{};
     Texture2D background_{};
     Texture2D enemy_{};
@@ -49,6 +52,8 @@ private:
 
     Music              bgm_{};
     Sound              laser_{};
+    std::vector<Sound> laserAliases_;
+    int                laserAliasIdx_{ 0 };
     std::vector<Sound> hitSounds_;
     bool               loaded_{ false };
 };

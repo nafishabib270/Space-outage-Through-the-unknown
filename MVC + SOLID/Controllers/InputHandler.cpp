@@ -7,9 +7,9 @@ InputSnapshot InputHandler::poll() const {
     s.left       = IsKeyDown(KEY_A);
     s.right      = IsKeyDown(KEY_D);
     s.jump       = IsKeyPressed(KEY_W);
-    s.fire       = IsMouseButtonDown(MOUSE_LEFT_BUTTON);
+    s.fire       = IsMouseButtonDown(MOUSE_RIGHT_BUTTON);
     s.anyMovement= s.up || s.down || s.left || s.right;
     s.mousePos   = GetMousePosition();
-    s.mouseDown  = IsMouseButtonDown(MOUSE_LEFT_BUTTON);
+    s.mouseDown  = IsMouseButtonDown(MOUSE_RIGHT_BUTTON);
     return s;
 }

@@ -7,7 +7,7 @@ void GameModel::reset() {
     stats_.reset();
     physics_.reset();
     bulletPool_    = BulletPool{ 50, 0.1f };
-    enemySpawner_.reset(10.0f, 1.0f);
+    enemySpawner_.reset(300.0f, 1.0f);
     alienSpawner_.reset();
     spaceshipPos_ = { SCREEN_W * 0.2f, SCREEN_H * 0.5f, 120, 70 };
     astronautPos_ = { 300, 535, 165, 155 };
@@ -37,7 +37,7 @@ std::vector<ICollidable*> GameModel::getAllCollidables() {
 void GameModel::updateSpaceshipPhase(float dt) {
     // Bullets & enemies
     bulletPool_.update(dt, SCREEN_W);
-    enemySpawner_.update(dt, SCREEN_W, SCREEN_H, spaceshipPos_);
+    enemySpawner_.update(dt, SCREEN_W, SCREEN_H, spaceshipPos_, stats_.getScore());
 
     auto enemies = enemySpawner_.getCollidables();
 
@@ -71,7 +71,7 @@ void GameModel::updateAstronautPhase(float dt) {
 
     Rectangle astroTarget{ astronautPos_.x, astronautPos_.y,
                             astronautPos_.width, astronautPos_.height };
-    enemySpawner_.update(dt, SCREEN_W, SCREEN_H, astroTarget);
+    enemySpawner_.update(dt, SCREEN_W, SCREEN_H, astroTarget, stats_.getScore());
     alienSpawner_.update(dt, SCREEN_W);
 
     auto all = getAllCollidables();

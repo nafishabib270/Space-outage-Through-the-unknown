@@ -5,8 +5,8 @@
 GameController::GameController()
     : renderer_(model_, resources_, SCREEN_W, SCREEN_H)
     , menuView_(SCREEN_W, SCREEN_H)
-    , spaceshipCtrl_(model_, resources_.getLaser())
-    , astronautCtrl_(model_, resources_.getLaser())
+    , spaceshipCtrl_(model_, resources_)
+    , astronautCtrl_(model_, resources_)
 {
     InitWindow(SCREEN_W, SCREEN_H, "GeoWorld");
     InitAudioDevice();

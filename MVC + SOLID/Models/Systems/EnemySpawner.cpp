@@ -5,20 +5,25 @@ EnemySpawner::EnemySpawner(int poolSize, float startSpeed, float startInterval)
     : pool_(poolSize), timeLimit_(startInterval),
       speed_(startSpeed), startSpeed_(startSpeed), startInterval_(startInterval) {}
 
-void EnemySpawner::update(float dt, int screenW, int screenH, Rectangle target) {
+void EnemySpawner::update(float dt, int screenW, int screenH, Rectangle target, int playerScore) {
     for (auto& e : pool_) e.update(dt, target);
 
     timer_ += dt;
     if (timer_ < timeLimit_) return;
 
+    float scoreSpeedBoost = static_cast<float>(playerScore) * 1.5f;
+    float effectiveSpeed  = speed_ + scoreSpeedBoost;
+    float maxSpeed        = startSpeed_ + 250.0f;
+    effectiveSpeed        = std::min(effectiveSpeed, maxSpeed);
+
     if (!pool_[slot_].isAlive())
         pool_[slot_].spawn(screenW + 10.0f,
-            static_cast<float>(rand() % static_cast<int>(screenH * 0.8f)), speed_);
+            static_cast<float>(rand() % static_cast<int>(screenH * 0.8f)), effectiveSpeed);
 
     timer_ = 0;
     slot_  = (slot_ + 1) % static_cast<int>(pool_.size());
     if (slot_ == 0) {
-        speed_ += 2.0f;
+        speed_ += 3.0f;
         if (timeLimit_ > minTimeLimit_) timeLimit_ -= 0.1f;
     }
 }

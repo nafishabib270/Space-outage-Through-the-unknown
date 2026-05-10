@@ -29,6 +29,7 @@ void GameRenderer::drawSpaceship() const {
 void GameRenderer::drawAstronaut() const {
     if (model_.isOnSpaceship()) return;
     Texture2D t = res_.getAstronaut();
+    if (astroFrameWidth_ <= 0.0f) astroFrameWidth_ = t.width / 8.0f;
     float dt = GetFrameTime();
     astroFrameTimer_ += dt;
     if (astroFrameTimer_ >= 0.075f) {

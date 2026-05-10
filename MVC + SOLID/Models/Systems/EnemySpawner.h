@@ -6,9 +6,10 @@
 // MODEL SYSTEM — SRP: timed slot-based enemy spawning only.
 class EnemySpawner {
 public:
+    EnemySpawner() : EnemySpawner(10, 300.0f, 1.0f) {}
     EnemySpawner(int poolSize, float startSpeed, float startInterval);
 
-    void update(float dt, int screenW, int screenH, Rectangle target);
+    void update(float dt, int screenW, int screenH, Rectangle target, int playerScore);
     void reset(float startSpeed, float startInterval);
     void setTimeLimit(float t) { timeLimit_ = t; }
 

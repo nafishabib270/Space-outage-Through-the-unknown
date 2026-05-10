@@ -4,13 +4,15 @@
 #include "raylib.h"
 #include <cmath>
 
+class ResourceManager;
+
 // CONTROLLER — SRP: maps astronaut input to Model physics mutations only.
 class AstronautController {
 public:
-    AstronautController(GameModel& model, Sound laserSound);
+    AstronautController(GameModel& model, ResourceManager& resources);
     void handleInput(const InputSnapshot& input, float dt);
 
 private:
-    GameModel& model_;
-    Sound      laserSound_;
+    GameModel&       model_;
+    ResourceManager& resources_;
 };

@@ -1,7 +1,8 @@
 #include "AstronautController.h"
+#include "ResourceManager.h"
 
-AstronautController::AstronautController(GameModel& model, Sound laser)
-    : model_(model), laserSound_(laser) {}
+AstronautController::AstronautController(GameModel& model, ResourceManager& resources)
+    : model_(model), resources_(resources) {}
 
 void AstronautController::handleInput(const InputSnapshot& in, float dt) {
     auto& physics = model_.getPhysics();
@@ -23,7 +24,7 @@ void AstronautController::handleInput(const InputSnapshot& in, float dt) {
             Rectangle origin{ pos.x - 40, pos.y - 40, pos.width, pos.width };
             bp.fire(origin, dir, 900.0f);
             bp.resetCooldown();
-            PlaySound(laserSound_);
+            PlaySound(resources_.getLaserAlias());
         }
     } else {
         model_.getBulletPool().tickCooldown(dt);

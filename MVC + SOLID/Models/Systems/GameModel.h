@@ -72,7 +72,7 @@ public:
 private:
     SessionStats    stats_;
     BulletPool      bulletPool_{ 50, 0.1f };
-    EnemySpawner    enemySpawner_{ 10, 200.0f, 1.0f };
+    EnemySpawner    enemySpawner_{ 10, 300.0f, 1.0f };
     AlienSpawner    alienSpawner_{ 20, 200.0f };
     CollisionSystem collisionSystem_{ stats_ };
     PhysicsSystem   physics_;
