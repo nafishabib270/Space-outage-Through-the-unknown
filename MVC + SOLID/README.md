@@ -7,10 +7,9 @@ Refactored using **MVC architecture** and all five **SOLID principles**.
 
 ## ▶ Play Immediately (No Build Required)
 
-1. Go to the [**Releases**](../../releases/latest) page
-2. Download `GeoWorld-Windows.zip`
-3. Extract the zip anywhere
-4. Double-click `GeoWorld.exe` — done
+1. Download `dist/GeoWorld-Windows.zip` from this repository
+2. Extract the zip anywhere on your Windows PC
+3. Double-click `GeoWorld.exe` — done
 
 No installers. No DLLs. No Visual C++ redistributable. Just run.
 
